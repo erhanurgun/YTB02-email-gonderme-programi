@@ -1,0 +1,10 @@
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.csproj.AssemblyReference.cache
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.Form1.resources
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.Properties.Resources.resources
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.csproj.GenerateResource.cache
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.csproj.CoreCompileInputs.cache
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\bin\Debug\mail_gonderme.exe.config
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\bin\Debug\mail_gonderme.exe
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\bin\Debug\mail_gonderme.pdb
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.exe
+D:\PROJECTS\ProgramlamaDilleri\CSharp\ahmetcan-bozkurt\YTB02-mail-gonderme\mail_gonderme\obj\Debug\mail_gonderme.pdb
