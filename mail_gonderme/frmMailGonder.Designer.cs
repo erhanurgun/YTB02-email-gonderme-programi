@@ -33,11 +33,14 @@ namespace mail_gonderme
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMailGonder));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnDosyaSec = new System.Windows.Forms.Button();
             this.cmbGonderici = new System.Windows.Forms.ComboBox();
             this.txtAlici = new System.Windows.Forms.TextBox();
             this.btnGonder = new System.Windows.Forms.Button();
+            this.tbxDosyaYolu = new System.Windows.Forms.TextBox();
             this.txtKonu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.rtxtMesaj = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +52,7 @@ namespace mail_gonderme
             this.hataMesaji = new System.Windows.Forms.ErrorProvider(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.linkWebsite = new System.Windows.Forms.LinkLabel();
+            this.openYolSec = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -63,16 +67,19 @@ namespace mail_gonderme
             this.tabControl1.Location = new System.Drawing.Point(6, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(349, 353);
+            this.tabControl1.Size = new System.Drawing.Size(349, 300);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnDosyaSec);
             this.tabPage1.Controls.Add(this.cmbGonderici);
             this.tabPage1.Controls.Add(this.txtAlici);
             this.tabPage1.Controls.Add(this.btnGonder);
+            this.tabPage1.Controls.Add(this.tbxDosyaYolu);
             this.tabPage1.Controls.Add(this.txtKonu);
             this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.rtxtMesaj);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -80,33 +87,43 @@ namespace mail_gonderme
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(341, 324);
+            this.tabPage1.Size = new System.Drawing.Size(341, 271);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "✉ Gönder";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnDosyaSec
+            // 
+            this.btnDosyaSec.Location = new System.Drawing.Point(243, 105);
+            this.btnDosyaSec.Name = "btnDosyaSec";
+            this.btnDosyaSec.Size = new System.Drawing.Size(59, 23);
+            this.btnDosyaSec.TabIndex = 6;
+            this.btnDosyaSec.Text = "Seç";
+            this.btnDosyaSec.UseVisualStyleBackColor = true;
+            this.btnDosyaSec.Click += new System.EventHandler(this.btnDosyaSec_Click);
             // 
             // cmbGonderici
             // 
             this.cmbGonderici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGonderici.FormattingEnabled = true;
             this.cmbGonderici.Items.AddRange(new object[] {
-            "erhanurgun",
-            "Bilinen Tasarım"});
-            this.cmbGonderici.Location = new System.Drawing.Point(79, 17);
+            "erhanrgn",
+            "erhanurgun.com.tr"});
+            this.cmbGonderici.Location = new System.Drawing.Point(79, 20);
             this.cmbGonderici.Name = "cmbGonderici";
             this.cmbGonderici.Size = new System.Drawing.Size(223, 24);
             this.cmbGonderici.TabIndex = 1;
             // 
             // txtAlici
             // 
-            this.txtAlici.Location = new System.Drawing.Point(79, 47);
+            this.txtAlici.Location = new System.Drawing.Point(79, 50);
             this.txtAlici.Name = "txtAlici";
             this.txtAlici.Size = new System.Drawing.Size(223, 22);
             this.txtAlici.TabIndex = 2;
             // 
             // btnGonder
             // 
-            this.btnGonder.Location = new System.Drawing.Point(79, 249);
+            this.btnGonder.Location = new System.Drawing.Point(79, 202);
             this.btnGonder.Name = "btnGonder";
             this.btnGonder.Size = new System.Drawing.Size(224, 53);
             this.btnGonder.TabIndex = 5;
@@ -114,9 +131,16 @@ namespace mail_gonderme
             this.btnGonder.UseVisualStyleBackColor = true;
             this.btnGonder.Click += new System.EventHandler(this.btnGonder_Click);
             // 
+            // tbxDosyaYolu
+            // 
+            this.tbxDosyaYolu.Location = new System.Drawing.Point(79, 106);
+            this.tbxDosyaYolu.Name = "tbxDosyaYolu";
+            this.tbxDosyaYolu.Size = new System.Drawing.Size(158, 22);
+            this.tbxDosyaYolu.TabIndex = 3;
+            // 
             // txtKonu
             // 
-            this.txtKonu.Location = new System.Drawing.Point(79, 75);
+            this.txtKonu.Location = new System.Drawing.Point(79, 78);
             this.txtKonu.Name = "txtKonu";
             this.txtKonu.Size = new System.Drawing.Size(223, 22);
             this.txtKonu.TabIndex = 3;
@@ -124,24 +148,33 @@ namespace mail_gonderme
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 106);
+            this.label3.Location = new System.Drawing.Point(27, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Mesaj:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Dosya:";
+            // 
             // rtxtMesaj
             // 
-            this.rtxtMesaj.Location = new System.Drawing.Point(79, 103);
+            this.rtxtMesaj.Location = new System.Drawing.Point(79, 135);
             this.rtxtMesaj.Name = "rtxtMesaj";
-            this.rtxtMesaj.Size = new System.Drawing.Size(223, 140);
+            this.rtxtMesaj.Size = new System.Drawing.Size(223, 61);
             this.rtxtMesaj.TabIndex = 4;
             this.rtxtMesaj.Text = "";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 78);
+            this.label2.Location = new System.Drawing.Point(38, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 3;
@@ -150,7 +183,7 @@ namespace mail_gonderme
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 50);
+            this.label1.Location = new System.Drawing.Point(43, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 3;
@@ -159,7 +192,7 @@ namespace mail_gonderme
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 20);
+            this.label4.Location = new System.Drawing.Point(10, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 3;
@@ -171,7 +204,7 @@ namespace mail_gonderme
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(341, 324);
+            this.tabPage2.Size = new System.Drawing.Size(341, 354);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "⚙️ Ayarlar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -216,7 +249,7 @@ namespace mail_gonderme
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(86, 363);
+            this.label5.Location = new System.Drawing.Point(86, 310);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(201, 32);
             this.label5.TabIndex = 8;
@@ -225,7 +258,7 @@ namespace mail_gonderme
             // linkWebsite
             // 
             this.linkWebsite.AutoSize = true;
-            this.linkWebsite.Location = new System.Drawing.Point(173, 379);
+            this.linkWebsite.Location = new System.Drawing.Point(173, 326);
             this.linkWebsite.Name = "linkWebsite";
             this.linkWebsite.Size = new System.Drawing.Size(114, 16);
             this.linkWebsite.TabIndex = 9;
@@ -233,11 +266,15 @@ namespace mail_gonderme
             this.linkWebsite.Text = "erhanurgun.com.tr";
             this.linkWebsite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkWebsite_LinkClicked);
             // 
+            // openYolSec
+            // 
+            this.openYolSec.FileName = "openFileDialog1";
+            // 
             // frmMailGonder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 402);
+            this.ClientSize = new System.Drawing.Size(362, 347);
             this.Controls.Add(this.linkWebsite);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tabControl1);
@@ -280,6 +317,10 @@ namespace mail_gonderme
         private System.Windows.Forms.ErrorProvider hataMesaji;
         private System.Windows.Forms.LinkLabel linkWebsite;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDosyaSec;
+        private System.Windows.Forms.TextBox tbxDosyaYolu;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.OpenFileDialog openYolSec;
     }
 }
 

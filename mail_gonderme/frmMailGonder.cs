@@ -87,6 +87,9 @@ namespace mail_gonderme
                         IsBodyHtml = rbtnOkNo,      // HTML etiketlerinin kullanılıp kullaanılmayacağını belirleme
                     };
 
+                    // Gönderilecek dosyayı ekle
+                    mail.Attachments.Add(new Attachment(@tbxDosyaYolu.Text)); 
+
                     mail.To.Add(txtAlici.Text);     // Gönderilecek mail adresi
                     client.Send(mail);              // Tüm işlemler onaylandıktan mail gönderim işlemini başlat
 
@@ -97,7 +100,7 @@ namespace mail_gonderme
             catch (Exception exp)
             {
                 // Mail gönderme işlemi sırasında oluşan herhangi bir hata olursa uyarı ver
-                MessageBox.Show("Beklenmedik bir sorun oluştu!", "HATA !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exp.ToString(), "HATA !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show(exp.ToString());
             }
         }
@@ -106,6 +109,14 @@ namespace mail_gonderme
         {
             // linkLabel'i istene websiteye yönlendir
             System.Diagnostics.Process.Start("https://erhanurgun.com.tr/");
+        }
+
+        private void btnDosyaSec_Click(object sender, EventArgs e)
+        {
+           
+            openYolSec.Filter = "Tüm dosyalar (*.*)|*.*";    // Tüm dosya formatlarını şeçebilir olarak ayarlandı
+            if (openYolSec.ShowDialog() == DialogResult.OK)
+                tbxDosyaYolu.Text = openYolSec.FileName;     // Gönderilecek dosya yolunu seç
         }
     }
 }

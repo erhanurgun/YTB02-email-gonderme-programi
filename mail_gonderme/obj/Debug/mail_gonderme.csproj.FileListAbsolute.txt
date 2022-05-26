@@ -18,3 +18,13 @@ C:\Users\erhan\Desktop\yeni\v1.1.0\mail_gonderme\obj\Debug\mail_gonderme.csproj.
 C:\Users\erhan\Desktop\yeni\v1.1.0\mail_gonderme\obj\Debug\mail_gonderme.csproj.CoreCompileInputs.cache
 C:\Users\erhan\Desktop\yeni\v1.1.0\mail_gonderme\obj\Debug\mail_gonderme.exe
 C:\Users\erhan\Desktop\yeni\v1.1.0\mail_gonderme\obj\Debug\mail_gonderme.pdb
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\bin\Debug\mail_gonderme.exe.config
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\bin\Debug\mail_gonderme.exe
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\bin\Debug\mail_gonderme.pdb
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.csproj.AssemblyReference.cache
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.frmMailGonder.resources
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.Properties.Resources.resources
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.csproj.GenerateResource.cache
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.csproj.CoreCompileInputs.cache
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.exe
+D:\PROJECTS\_github_\YTB02-mail-gonderme-main\mail_gonderme\obj\Debug\mail_gonderme.pdb
